@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+env/
+micromamba/
+
+# macOS
+.DS_Store
+
+# Machine-local configuration
+configs/paths.local.sh
+configs/artifact_paths.local.tsv
+
+# Logs
+logs/
+
+# Downloaded repositories
+external/
+
+# Data
+data/
+datasets/
+temporal_benchmark/data/
+temporal_benchmark/outputs/
+
+# Generated outputs and large artefacts
+results/
+*.h5
+*.npz
+*.npy
+*.pkl
+*.zip
+*.tgz
+*.tar
+*.tar.gz
+*.o[0-9]*
+*.e[0-9]*
+
+.idea

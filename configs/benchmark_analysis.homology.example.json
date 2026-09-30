@@ -1,0 +1,36 @@
+{
+  "run_name": "MMseqs2-30-benchmark-analysis",
+  "top_n": 20,
+  "datasets": [
+    {
+      "id": "MMseqs2-30",
+      "benchmark_dir": "/path/to/homology/30/csvs",
+      "obo_file": "/path/to/frozen/go-basic.obo",
+      "source_annotations": {
+        "type": "pfp-pickle-directory",
+        "path": "/path/to/homology/30/pre_projection",
+        "projection_policy": "DeepGOPlus-compatible min_count=50 label universe"
+      },
+      "taxonomy_sources": [
+        {
+          "type": "uniprot-dat",
+          "path": "/path/to/relevant_uniprot.dat.gz",
+          "name": "frozen-homology-taxonomy",
+          "priority": 100
+        }
+      ],
+      "modality_availability": {
+        "type": "long-table",
+        "path": "/path/to/homology/30/embedding_availability.tsv.gz",
+        "protein_id_column": "protein_id",
+        "modality_column": "modality",
+        "states": {
+          "embedding_available": {
+            "column": "valid",
+            "true_values": ["true"]
+          }
+        }
+      }
+    }
+  ]
+}

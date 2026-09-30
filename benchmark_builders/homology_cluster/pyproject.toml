@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homology-cluster-benchmark"
+version = "0.2.0"
+description = "MMseqs2 and supplied-clique benchmark builder for PFP"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy==2.0.2",
+  "pandas==2.3.3",
+]
+
+[project.scripts]
+homology-cluster-benchmark = "homology_cluster_benchmark.builder:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"

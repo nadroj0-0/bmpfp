@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pfp-benchmark-analysis"
+version = "0.1.0"
+description = "Descriptive analysis of PFP-compatible benchmarks"
+requires-python = ">=3.9"
+dependencies = ["pandas==2.3.3"]
+
+[project.scripts]
+pfp-benchmark-analysis = "pfp_benchmark_analysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contemporary-cafa-benchmark"
+version = "0.2.0"
+description = "CAFA-style temporal and CAFA3 benchmark construction for PFP-compatible CSVs"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy==2.0.2",
+  "pandas==2.3.3",
+]
+
+[project.scripts]
+cafa-benchmark-builder = "cafa_benchmark_builder.cli:main"
+pfp-random-baseline = "cafa_benchmark_builder.random_baseline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cafa_benchmark_builder = ["resources/*.txt"]

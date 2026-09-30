@@ -1,0 +1,26 @@
+# CAFA3 target taxa from CAFA3_targets/CAFA3_target_track.xlsx.
+# Excludes target_moonlight.fasta because the spreadsheet does not assign one
+# NCBI taxonomy ID to that special track.
+7227
+208963
+237561
+9606
+243232
+273057
+160488
+170187
+223283
+224308
+243273
+321314
+83333
+85962
+99287
+10090
+10116
+284812
+3702
+44689
+559292
+7955
+8355

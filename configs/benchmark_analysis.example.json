@@ -1,0 +1,90 @@
+{
+  "run_name": "benchmark-analysis",
+  "top_n": 20,
+  "datasets": [
+    {
+      "id": "cafa3-original-pfp",
+      "benchmark_dir": "/path/to/cafa3/original_pfp/csvs",
+      "obo_file": "/path/to/cafa3/go.obo",
+      "source_annotations": {
+        "type": "pfp-pickle-directory",
+        "path": "/path/to/cafa3/original_pfp/pre_projection_pickles",
+        "projection_policy": "Original PFP CAFA3 min_count=50 label-universe projection"
+      },
+      "taxonomy_sources": [
+        {"type": "uniprot-dat", "path": "/path/to/2025/trembl.dat.gz", "name": "uniprot-2025-01-trembl", "priority": 100},
+        {"type": "uniprot-dat", "path": "/path/to/2025/swissprot.dat.gz", "name": "uniprot-2025-01-swissprot", "priority": 200},
+        {"type": "uniprot-dat", "path": "/path/to/2026/trembl.dat.gz", "name": "uniprot-2026-02-trembl", "priority": 300},
+        {"type": "uniprot-dat", "path": "/path/to/2026/swissprot.dat.gz", "name": "uniprot-2026-02-swissprot", "priority": 400}
+      ],
+      "modality_availability": {
+        "type": "long-table",
+        "path": "/path/to/cafa3/embedding_availability.tsv.gz",
+        "protein_id_column": "protein_id",
+        "modality_column": "modality",
+        "states": {
+          "embedding_available": {
+            "column": "valid",
+            "true_values": ["true"]
+          }
+        }
+      }
+    },
+    {
+      "id": "contemporary-2025-01-to-2026-02-global-nk",
+      "benchmark_dir": "/path/to/contemporary/global_nk/csvs",
+      "obo_file": "/path/to/2026/go-basic.obo",
+      "source_annotations": {
+        "type": "pfp-pickle-directory",
+        "path": "/path/to/contemporary/global_nk/pre_projection_pickles",
+        "projection_policy": "Global-NK min_count=50 label-universe projection"
+      },
+      "taxonomy_sources": [
+        {"type": "uniprot-dat", "path": "/path/to/2025/trembl.dat.gz", "name": "uniprot-2025-01-trembl", "priority": 100},
+        {"type": "uniprot-dat", "path": "/path/to/2025/swissprot.dat.gz", "name": "uniprot-2025-01-swissprot", "priority": 200},
+        {"type": "uniprot-dat", "path": "/path/to/2026/trembl.dat.gz", "name": "uniprot-2026-02-trembl", "priority": 300},
+        {"type": "uniprot-dat", "path": "/path/to/2026/swissprot.dat.gz", "name": "uniprot-2026-02-swissprot", "priority": 400}
+      ],
+      "modality_availability": {
+        "type": "long-table",
+        "path": "/path/to/contemporary/global_nk/embedding_availability.tsv.gz",
+        "protein_id_column": "protein_id",
+        "modality_column": "modality",
+        "states": {
+          "embedding_available": {
+            "column": "valid",
+            "true_values": ["true"]
+          }
+        }
+      }
+    },
+    {
+      "id": "contemporary-2025-01-to-2026-02-nk-lk",
+      "benchmark_dir": "/path/to/contemporary/nk_lk/csvs",
+      "obo_file": "/path/to/2026/go-basic.obo",
+      "source_annotations": {
+        "type": "pfp-pickle-directory",
+        "path": "/path/to/contemporary/nk_lk/pre_projection_pickles",
+        "projection_policy": "Contemporary NK+LK min_count=50 label-universe projection"
+      },
+      "taxonomy_sources": [
+        {"type": "uniprot-dat", "path": "/path/to/2025/trembl.dat.gz", "name": "uniprot-2025-01-trembl", "priority": 100},
+        {"type": "uniprot-dat", "path": "/path/to/2025/swissprot.dat.gz", "name": "uniprot-2025-01-swissprot", "priority": 200},
+        {"type": "uniprot-dat", "path": "/path/to/2026/trembl.dat.gz", "name": "uniprot-2026-02-trembl", "priority": 300},
+        {"type": "uniprot-dat", "path": "/path/to/2026/swissprot.dat.gz", "name": "uniprot-2026-02-swissprot", "priority": 400}
+      ],
+      "modality_availability": {
+        "type": "long-table",
+        "path": "/path/to/contemporary/nk_lk/embedding_availability.tsv.gz",
+        "protein_id_column": "protein_id",
+        "modality_column": "modality",
+        "states": {
+          "embedding_available": {
+            "column": "valid",
+            "true_values": ["true"]
+          }
+        }
+      }
+    }
+  ]
+}
